@@ -75,7 +75,7 @@ public abstract class LibraryItem {
   /**
    * @param available the available to set
    */
-  protected void setAvailable(boolean available) {
+  private void setAvailable(boolean available) {
     this.available = available;
   }
 
@@ -95,19 +95,19 @@ public abstract class LibraryItem {
   /**
    * Sets the due date.
    */
-  protected void setDueDate() {
+  private void setDueDate() {
     dueDate = Calendar.getInstance();
     dueDate.add(Calendar.DATE, 21);
   }
   
- /**
-  * Overload setDueDate
-  */
-  
-  protected void setDueDate(int weeks) {
-    dueDate = Calendar.getInstance();
-    dueDate.add(Calendar.DATE, weeks * 7);
-  }
+// /**
+//  * Overload setDueDate
+//  */
+//  
+//  protected void setDueDate(int weeks) {
+//    dueDate = Calendar.getInstance();
+//    dueDate.add(Calendar.DATE, weeks * 7);
+//  }
 
   @Override
   public String toString() {
