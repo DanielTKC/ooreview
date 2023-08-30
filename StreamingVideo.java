@@ -19,7 +19,7 @@ public class StreamingVideo extends Video {
   @Override
   public boolean checkOut() {
     if (super.checkOut()) {
-        adjustDueDate(-7); 
+        adjustDueDate(7); 
         return true;
     }
     return false;
