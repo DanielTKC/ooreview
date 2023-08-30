@@ -100,14 +100,15 @@ public abstract class LibraryItem {
     dueDate.add(Calendar.DATE, 21);
   }
   
-// /**
-//  * Overload setDueDate
-//  */
-//  
-//  protected void setDueDate(int weeks) {
-//    dueDate = Calendar.getInstance();
-//    dueDate.add(Calendar.DATE, weeks * 7);
-//  }
+  /**
+   * Adds protected method adjustDueDate.
+   */
+  
+  protected void adjustDueDate(int days) {
+    if (dueDate != null) {
+        dueDate.add(Calendar.DATE, days);
+    }
+}
 
   @Override
   public String toString() {
