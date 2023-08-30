@@ -52,15 +52,12 @@ public class Video extends LibraryItem {
   
   @Override
   public boolean checkOut() {
-      if (isAvailable()) {
-          setAvailable(false);
-          setDueDate(1);  // set due date to 1 week
-          return true;
-      } else {
-          System.out.println("The video is unavailable and cannot be checked out");
-          return false;
-      }
-  }
+    if (super.checkOut()) {
+        adjustDueDate(-14); 
+        return true;
+    }
+    return false;
+}
   
   
   
